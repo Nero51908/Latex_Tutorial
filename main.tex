@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{listings}
+\begin{document}
+	\tableofcontents
+\title{\LaTeX \ Tutorial to Myself}
+\maketitle
+\noindent
+Hi there. This is the .tex file I use to log down what I can do with \LaTeX so far.
+\\This will demonstrate the usage in case I forget the keywords and syntaxes.
+\\The following contains 
+\begin{itemize}
+	\item Page layout(passage structure, font size...)
+	\item Math expressions
+	\item Figure and other materials insertion
+	\item Some tips in detail to avoid errors
+\end{itemize}
+\section{Page Layout}
+	\subsection{Overall Font Size}
+	``documentclass'' includes default layouts like ``article''. You can add attributes like [10pt] to customize overall default font size as long as the layout supports that size. The line of code is like this:
+	\begin{lstlisting}
+	\documentclass[10pt]{article}
+	\end{lstlisting}
+	For ``article" specification, 10pt(default), 11pt, 12pt are available.
+	In addition, you can install and use package `\href{http://ctan.mirror.rafal.ca/macros/latex/contrib/extsizes/extsizes.pdf}{extsize}' to make font size from 8pt to 20pt adjustable.
+	\subsection{Localized font size: large, small}
+	How to make only \begin{LARGE}a section of words larger than\end{LARGE} other words in the sentence?
+	\\Hi there, is this larger than other text?{\LARGE\ Is this larger?} and what about now?
+	If you don't enclose the {\LARGE{font size keyword}, it will affect all the sentence and its following sentences.
+		\\Even I start a newline, the effect still exists. I currently don't know how to stop this.
+		\begin{itemize}
+			\item can this item stop the effect?
+			\item it seems can't
+		\end{itemize}
+		so, what will limit the area under control of size keywords}
+	The answer is ``curly brackets''. Note that the lower half of the bracket should be outside enumerate and itemize sections.
+\section{Math Expressions}	
+This is the part about writing formulas and tweaking format.
+	\subsection{Superscript and Subscript}
+The dollar sign \$ used in pairs represents the content is in the form of mathematical formula. For instance, $Y(x,z)=x^2+z^3$. Double dollar sign pair will be presented slightly different $$Y(x,z)=x^2+z^3$$ Double dollar pair will give a complete line for the formula. The superscript(exponential number) is using the conventional representation among programing languages, while subscripts are represented by $x_1$, an under dash.When more than one characters are used at a position in the formula (object or the subscriptions or so on), curly brackets are always helpful. ${Hello}_{hi}$
+$ \frac{1}{x}+x^2$
+\section{Material Insertion}
+	\subsection{Insert .jpeg file}
+\section{Tips}
+	\subsection{Newline after items}
+	There will be automatically triggered newline after ``item'', so double backslash to create a new line is not required and shouldn't be used after items. For instance:
+	\begin{lstlisting}	
+	\begin{itemize}
+	\item Hello There
+	\\Nice to see you
+	\end{itemize}
+	\\Oops
+	\end{lstlisting}
+	There will be an error report at ``Oops''.
+	\subsection{Quotation marks}
+	In \LaTeX, quotation marks are typed as ``this''. The mark before quoted words should be the key to the left of number key 1 on a ordinary keyboard area. The backward half quote is as the convention'' or ".
+	
+	
+\end{document}
