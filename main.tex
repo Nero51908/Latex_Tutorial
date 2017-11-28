@@ -35,7 +35,12 @@ Hi there. This is the .tex file I use to log down what I can do with \LaTeX so f
 		\end{itemize}
 		so, what will limit the area under control of size keywords}
 	The answer is ``curly brackets''. Note that the lower half of the bracket should be outside enumerate and itemize sections.
-\section{Math Expressions}	
+	\subsection{Headings numbering: Use Alphabet to number subsections}
+	Put the following line of code under you documentclass declaration:
+		\begin{lstlisting}	
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}			
+		\end{lstlisting}
+	\section{Math Expressions}	
 This is the part about writing formulas and tweaking format.
 	\subsection{Superscript and Subscript}
 The dollar sign \$ used in pairs represents the content is in the form of mathematical formula. For instance, $Y(x,z)=x^2+z^3$. Double dollar sign pair will be presented slightly different $$Y(x,z)=x^2+z^3$$ Double dollar pair will give a complete line for the formula. The superscript(exponential number) is using the conventional representation among programing languages, while subscripts are represented by $x_1$, an under dash.When more than one characters are used at a position in the formula (object or the subscriptions or so on), curly brackets are always helpful. ${Hello}_{hi}$
@@ -55,6 +60,6 @@ $ \frac{1}{x}+x^2$
 	There will be an error report at ``Oops''.
 	\subsection{Quotation marks}
 	In \LaTeX, quotation marks are typed as ``this''. The mark before quoted words should be the key to the left of number key 1 on a ordinary keyboard area. The backward half quote is as the convention'' or ".
-	
+
 	
 \end{document}
